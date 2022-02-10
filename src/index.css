@@ -1,13 +1,65 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.btn {
+  text-decoration: none;
+  color: black;
+  margin: 2px;
+  padding: 10px;
+  color: white;
+}
+.btn-active {
+  background-color: black;
+  color: white;
+}
+.btn-inActive {
+  background-color: #0288d1;
+}
+.courses-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 300px;
+  border: 2px solid red;
+}
+.card-title {
+  text-align: center;
+}
+.card-img__special {
+  height: 170px;
+}
+.card-btn {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.8s background-color;
+
+ 
+  background-color: #29b6f6;
+  color: white;
+ 
+}
+.card-btn:hover {
+  background-color: #0288d1;
 }
