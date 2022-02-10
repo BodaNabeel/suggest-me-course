@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
   const setClassNameBtn = (state) => {
-    return state ? "btn btn-secondary me-3" : "btn btn-primary me-3";
+    return state ? "btn btn-active" : "btn btn-inActive";
   };
   return (
     <>
@@ -27,7 +27,7 @@ function App() {
         Full Stack
       </NavLink>
 
-      <div className="course-list">
+      <div className="courses-container">
         <Outlet />
       </div>
     </>
