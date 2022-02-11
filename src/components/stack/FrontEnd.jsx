@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
+import FrontEndCourse from "../FrontEndCourse";
 
 export default function FrontEnd() {
   const frontendDetail = [
@@ -32,8 +34,9 @@ export default function FrontEnd() {
   return (
     <>
       {frontendDetail.map((detail) => {
+        
         return (
-          <div className="card">
+          <div key={uuidv4()} className="card">
             <img src={detail.cardSrc} alt="" className="card-img" />
             <p className="card-title">{detail.cardTitle}</p>
             {/* <button className="card-btn btn-primary">check out</button> */}
@@ -41,6 +44,7 @@ export default function FrontEnd() {
           </div>
         );
       })}
+      <Outlet/>
     </>
   );
 }

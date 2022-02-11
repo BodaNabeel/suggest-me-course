@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function FullStack() {
   const fullstackDetail = [
@@ -32,7 +33,7 @@ export default function FullStack() {
     <>
       {fullstackDetail.map((detail) => {
         return (
-          <div className="card">
+          <div key={uuidv4()} className="card">
             <img src={detail.cardSrc} alt="" className="card-img" />
             <p className="card-title">{detail.cardTitle}</p>
             {/* <button className="card-btn btn-primary">check out</button> */}
