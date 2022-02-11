@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
-
 function App() {
   const setClassNameBtn = (state) => {
+  
     return state ? "btn btn-active" : "btn btn-inActive";
   };
   return (
