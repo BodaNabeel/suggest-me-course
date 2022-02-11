@@ -1,76 +1,50 @@
 import React from "react";
 
 export default function FrontEnd() {
+  const frontendDetail = [
+    {
+      cardSrc: "https://img-c.udemycdn.com/course/240x135/2153774_bef0_4.jpg",
+      cardTitle: "Modern HTML & CSS From The Beginning (Including Sass)",
+      cardPath: "",
+    },
+    {
+      cardSrc: "https://img-c.udemycdn.com/course/240x135/1463348_52a4_2.jpg",
+      cardTitle: "Modern JavaScript From The Beginning",
+      cardPath: "",
+    },
+    {
+      cardSrc: "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+      cardTitle: "React - The Complete Guide (incl Hooks, React Router, Redux)",
+      cardPath: "",
+    },
+    {
+      cardSrc:
+        "https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png",
+      cardTitle: "JavaScript30",
+      cardPath: "",
+    },
+    {
+      cardSrc: "https://img-c.udemycdn.com/course/240x135/4427730_5388.jpg",
+      cardTitle: "React Front To Back 2022",
+      cardPath: "",
+    },
+    {
+      cardSrc: "https://img-c.udemycdn.com/course/240x135/995016_ebf4_3.jpg",
+      cardTitle: "Vue - The Complete Guide (incl. Router & Composition API)",
+      cardPath: "",
+    },
+  ];
   return (
     <>
-      <div className="card">
-        <img
-          src="https://img-c.udemycdn.com/course/240x135/2153774_bef0_4.jpg"
-          alt=""
-          className="card-img"
-        />
-        <p className="card-title">
-          Modern HTML & CSS From The Beginning (Including Sass)
-        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      <div className="card">
-        <img
-          src="https://img-c.udemycdn.com/course/240x135/1463348_52a4_2.jpg"
-          alt=""
-          className="card-img"
-        />
-        <p className="card-title">
-        Modern JavaScript From The Beginning
-        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      <div className="card">
-        <img
-          src="https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg"
-          alt=""
-          className="card-img"
-        />
-        <p className="card-title">
-          React - The Complete Guide (incl Hooks, React Router, Redux)
-        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      <div className="card">
-        <img
-          src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png"
-          alt=""
-          className="card-img card-img__special"
-        />
-        <p className="card-title">
-       JavaScript30
-        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      <div className="card">
-        <img
-         src="https://img-c.udemycdn.com/course/240x135/4427730_5388.jpg"
-          alt=""
-          className="card-img"
-        />
-        <p className="card-title">
-        React Front To Back 2022
-        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      <div className="card">
-        <img
-          src="https://img-c.udemycdn.com/course/240x135/995016_ebf4_3.jpg"
-          alt=""
-          className="card-img"
-        />
-        <p className="card-title">
-        Vue - The Complete Guide (incl. Router & Composition API)        </p>
-        <button className="card-btn btn-primary">check out</button>
-      </div>
-      
-     
-      
+      {frontendDetail.map((detail) => {
+        return (
+          <div className="card">
+            <img src={detail.cardSrc} alt="" className="card-img" />
+            <p className="card-title">{detail.cardTitle}</p>
+            <button className="card-btn btn-primary">check out</button>
+          </div>
+        );
+      })}
     </>
   );
 }
