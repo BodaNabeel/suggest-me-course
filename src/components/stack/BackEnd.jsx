@@ -8,12 +8,12 @@ export default function BackEnd(database) {
     if (detail.courseType === "BE") {
       return (
         <div key={uuidv4()} className="card">
-          <img src={detail.cardSrc} alt="" className="card-img" />
-          <p className="card-title">{detail.cardTitle}</p>
+          <img src={detail.src} alt="" className="card-img" />
+          <p className="card-title">{detail.title}</p>
           <button
             onClick={() =>
               navigate(
-                `${detail.cardTitle.replaceAll(" ", "-")}/${detail.id}/${
+                `${detail.title.replaceAll(" ", "-")}/${detail.id}/${
                   detail.courseType
                 }`,
                 { state: detail.id }

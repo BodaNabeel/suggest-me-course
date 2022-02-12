@@ -8,10 +8,10 @@ export default function FrontEnd(database) {
     if (detail.courseType === "FE") {
       return (
         <div key={uuidv4()} className="card">
-          <img src={detail.cardSrc} alt="" className="card-img" />
-          {/* <p className="card-title">{detail.cardTitle}</p>
+          <img src={detail.src} alt="" className="card-img" />
+          {/* <p className="card-title">{detail.title}</p>
           <Link
-            to={`${detail.cardTitle.replaceAll(" ", "-")}/${detail.id}/${
+            to={`${detail.title.replaceAll(" ", "-")}/${detail.id}/${
               detail.courseType
             }`}
             className="card-btn"
@@ -21,7 +21,7 @@ export default function FrontEnd(database) {
           <button
             onClick={() =>
               navigate(
-                `${detail.cardTitle.replaceAll(" ", "-")}/${detail.id}/${
+                `${detail.title.replaceAll(" ", "-")}/${detail.id}/${
                   detail.courseType
                 }`,
                 { state: detail.id }
