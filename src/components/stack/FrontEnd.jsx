@@ -9,15 +9,7 @@ export default function FrontEnd(database) {
       return (
         <div key={uuidv4()} className="card">
           <img src={detail.src} alt="" className="card-img" />
-          {/* <p className="card-title">{detail.title}</p>
-          <Link
-            to={`${detail.title.replaceAll(" ", "-")}/${detail.id}/${
-              detail.courseType
-            }`}
-            className="card-btn"
-          >
-            checkout
-          </Link> */}
+          <p className="card-title">{detail.title}</p>
           <button
             onClick={() =>
               navigate(
