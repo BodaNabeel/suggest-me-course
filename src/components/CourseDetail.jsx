@@ -8,16 +8,16 @@ export default function CourseDetail({ database }) {
   const markup = database.map((database) => {
     if (database.id === paramsID) {
       return (
-        <div key={database.id}>
-          <h1>{database.title}</h1>
-          <p>CourseType: {database.courseType}</p>
-          <img src={database.src} alt="" />
-          <ul key={database.id}>
-            Includes
-            {database.includes.map((includes) => {
-              return <li key={uuidv4()}>{includes}</li>;
-            })}
-          </ul>
+        <div className="detail-container" key={database.id}>
+          <div className="container-top">
+            <img
+              src={database.src}
+              alt="thumbnail-of-course"
+              className="container-top_img"
+            />
+            <h1 className="container-top_title">{database.title}</h1>
+            <p className="container-top_author">Created by: {database.tutor}</p>
+          </div>
 
           <div className="learn">
             <ul className="learn-list list-1">
@@ -34,6 +34,19 @@ export default function CourseDetail({ database }) {
                 return (
                   <li className="learn-item" key={uuidv4()}>
                     {learn}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className="includes">
+            <p className="includes-title">Incudes</p>
+            <ul className="includes-list" key={database.id}>
+              {database.includes.map((includes) => {
+                return (
+                  <li className="includes-item" key={uuidv4()}>
+                    {includes}
                   </li>
                 );
               })}
