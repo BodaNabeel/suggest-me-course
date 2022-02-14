@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { FaCheck,FaDotCircle } from "react-icons/fa";
+import { FaCheck, FaDotCircle } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 
 export default function CourseDetail({ database }) {
@@ -16,9 +16,13 @@ export default function CourseDetail({ database }) {
               alt="thumbnail-of-course"
               className="container-top_img"
             />
-            <h1 className="container-top_title">{database.title}</h1>
-            {/* TODO: make tutor name dynamic */}
-            <p className="container-top_author">Created by: {database.tutor}</p>
+            <div className="container-top_detail">
+              <h1 className="container-top_title">{database.title}</h1>
+              {/* TODO: make tutor name dynamic */}
+              <p className="container-top_author">
+                Created by: {database.tutor}
+              </p>
+            </div>
           </div>
 
           <div className="content">
@@ -49,7 +53,9 @@ export default function CourseDetail({ database }) {
               {database.includes.map((includes) => {
                 return (
                   <div className="includes-item" key={uuidv4()}>
-                    <span className="includes-icon"><FaDotCircle/></span>
+                    <span className="includes-icon">
+                      <FaDotCircle />
+                    </span>
                     {includes}
                   </div>
                 );
